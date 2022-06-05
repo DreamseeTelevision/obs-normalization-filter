@@ -21,6 +21,10 @@ jobs:
       with:
         python-version: '3.x'
     - run: pip install meson ninja
+    - uses: shogo82148/actions-setup-perl@v1
+      with:
+        perl-version: '5.32'
+        distribution: strawberry
     - run: meson setup /
       env:
         CC: gcc
